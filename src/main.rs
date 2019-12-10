@@ -24,7 +24,7 @@ fn base64decode(input: String) -> String {
         .chunks(8)                                              //split into 8 character chunks
         .map(|chunk| {
             let num_str = chunk.iter().collect::<String>();
-            usize::from_str_radix(&num_str, 2).unwrap() as u8   //convert the binary string into its u8 value
+            usize::from_str_radix(num_str, 2).unwrap() as u8   //convert the binary string into its u8 value
         })
         .collect::<Vec<_>>();
  
